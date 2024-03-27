@@ -3,6 +3,7 @@ import { Roboto } from 'next/font/google';
 import './globals.css';
 
 import { MaterialProvider } from '@/lib/utils/providers/MaterialProvider';
+import { ReactQueryProvider } from '@/lib/utils/providers/ReactQueryProvider';
 
 export const metadata: Metadata = {
     title: 'Stack Overflow Tags',
@@ -21,9 +22,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <MaterialProvider>
-                <body className={roboto.className}>{children}</body>
-            </MaterialProvider>
+            <body className={roboto.className}>
+                <ReactQueryProvider>
+                    <MaterialProvider>{children}</MaterialProvider>
+                </ReactQueryProvider>
+            </body>
         </html>
     );
 }
