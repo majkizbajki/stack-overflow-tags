@@ -1,0 +1,4 @@
+node_modules
+postcss.config.js
+prettier.config.js
+next.config.mjs

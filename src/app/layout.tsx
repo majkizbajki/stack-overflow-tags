@@ -1,28 +1,29 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { MaterialProvider } from "@/lib/utils/providers/MaterialProvider";
-import { Roboto, Adamina } from "next/font/google";
+import type { Metadata } from 'next';
+import { Roboto } from 'next/font/google';
+import './globals.css';
+
+import { MaterialProvider } from '@/lib/utils/providers/MaterialProvider';
 
 export const metadata: Metadata = {
-  title: "Stack Overflow Tags",
-  description: "Created by @majkizbajki",
+    title: 'Stack Overflow Tags',
+    description: 'Created by @majkizbajki'
 };
 
 const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
+    subsets: ['latin'],
+    weight: ['300', '400', '500', '700']
 });
 
 export default function RootLayout({
-  children,
+    children
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <MaterialProvider>
-        <body className={roboto.className}>{children}</body>
-      </MaterialProvider>
-    </html>
-  );
+    return (
+        <html lang='en'>
+            <MaterialProvider>
+                <body className={roboto.className}>{children}</body>
+            </MaterialProvider>
+        </html>
+    );
 }

@@ -1,3 +1,99 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint/eslint-plugin",
+    "prettier",
+    "react",
+    "react-hooks",
+    "simple-import-sort"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js"],
+      "parser": "@typescript-eslint/parser"
+    }
+  ],
+  "rules": {
+    "simple-import-sort/imports": [
+      2,
+      {
+        "groups": [
+          [
+            "^react",
+            "^@?\\w",
+            "^\\u0000",
+            "^src/(api|app|components|context|hooks|utils)(/.*|$)",
+            "^\\.",
+            "^\\.\\.(?!/?$)",
+            "^\\.\\./?$",
+            "^\\./(?=.*/)(?!/?$)",
+            "^\\.(?!/?$)",
+            "^\\./?$",
+            "^.+\\.s?css$"
+          ]
+        ]
+      }
+    ],
+    "arrow-body-style": 0,
+    "curly": [2, "all"],
+    "prettier/prettier": [2, { "endOfLine": "auto" }],
+    "jsx-quotes": [2, "prefer-single"],
+    "no-console": [2, { "allow": ["debug", "error", "info", "warn"] }],
+    "sort-imports": 0,
+    "no-confusing-arrow": 0,
+    "eqeqeq": [2, "always"],
+    "prefer-template": 1,
+    "import/no-extraneous-dependencies": 0,
+    "import/extensions": 0,
+    "import/prefer-default-export": 0,
+    "import/order": 0,
+    "react/button-has-type": 1,
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-uses-react": 2,
+    "react/react-in-jsx-scope": 0,
+    "react/function-component-definition": 0,
+    "react/jsx-filename-extension": [
+      2,
+      { "extensions": [".ts", ".tsx", ".js", ".jsx"] }
+    ],
+    "react/jsx-no-useless-fragment": 2,
+    "react/require-default-props": [1, { "ignoreFunctionalComponents": true }],
+    "react/self-closing-comp": 2,
+    "react-hooks/rules-of-hooks": 2,
+    "@typescript-eslint/member-ordering": [2, { "default": ["field"] }],
+    "@typescript-eslint/no-empty-interface": 1,
+    "@typescript-eslint/no-explicit-any": 2,
+    "@typescript-eslint/no-non-null-assertion": 1,
+    "@typescript-eslint/no-unused-vars": 1,
+    "@typescript-eslint/no-use-before-define": 0,
+    "@typescript-eslint/adjacent-overload-signatures": 1,
+    "@typescript-eslint/no-require-imports": 2,
+    "@typescript-eslint/restrict-plus-operands": 2
+  }
 }
