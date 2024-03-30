@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body className={roboto.className}>
+            <body suppressHydrationWarning className={roboto.className}>
                 <ReactQueryProvider>
                     <MaterialProvider>{children}</MaterialProvider>
                 </ReactQueryProvider>
