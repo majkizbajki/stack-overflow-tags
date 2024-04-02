@@ -6,7 +6,7 @@ interface SkeletonProps {
 
 export const Skeleton = ({ rows }: SkeletonProps) => {
     return (
-        <Box>
+        <Box data-testid='skeleton-container'>
             {Array.from({ length: rows }).map((_, index) => (
                 <MUISkeleton
                     key={`skeleton-row-${index}`}
