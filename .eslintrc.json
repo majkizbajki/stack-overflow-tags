@@ -13,7 +13,8 @@
     "prettier",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
-    "plugin:@tanstack/eslint-plugin-query/recommended"
+    "plugin:@tanstack/eslint-plugin-query/recommended",
+    "plugin:storybook/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -35,7 +36,11 @@
   },
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx", "*.js"],
+      "files": [
+        "*.ts",
+        "*.tsx",
+        "*.js"
+      ],
       "parser": "@typescript-eslint/parser"
     }
   ],
@@ -61,13 +66,37 @@
       }
     ],
     "arrow-body-style": 0,
-    "curly": [2, "all"],
-    "prettier/prettier": [2, { "endOfLine": "auto" }],
-    "jsx-quotes": [2, "prefer-single"],
-    "no-console": [2, { "allow": ["debug", "error", "info", "warn"] }],
+    "curly": [
+      2,
+      "all"
+    ],
+    "prettier/prettier": [
+      2,
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "jsx-quotes": [
+      2,
+      "prefer-single"
+    ],
+    "no-console": [
+      2,
+      {
+        "allow": [
+          "debug",
+          "error",
+          "info",
+          "warn"
+        ]
+      }
+    ],
     "sort-imports": 0,
     "no-confusing-arrow": 0,
-    "eqeqeq": [2, "always"],
+    "eqeqeq": [
+      2,
+      "always"
+    ],
     "prefer-template": 1,
     "import/no-extraneous-dependencies": 0,
     "import/extensions": 0,
@@ -80,13 +109,32 @@
     "react/function-component-definition": 0,
     "react/jsx-filename-extension": [
       2,
-      { "extensions": [".ts", ".tsx", ".js", ".jsx"] }
+      {
+        "extensions": [
+          ".ts",
+          ".tsx",
+          ".js",
+          ".jsx"
+        ]
+      }
     ],
     "react/jsx-no-useless-fragment": 2,
-    "react/require-default-props": [1, { "ignoreFunctionalComponents": true }],
+    "react/require-default-props": [
+      1,
+      {
+        "ignoreFunctionalComponents": true
+      }
+    ],
     "react/self-closing-comp": 2,
     "react-hooks/rules-of-hooks": 2,
-    "@typescript-eslint/member-ordering": [2, { "default": ["field"] }],
+    "@typescript-eslint/member-ordering": [
+      2,
+      {
+        "default": [
+          "field"
+        ]
+      }
+    ],
     "@typescript-eslint/no-empty-interface": 1,
     "@typescript-eslint/no-explicit-any": 2,
     "@typescript-eslint/no-non-null-assertion": 1,

@@ -9,8 +9,8 @@ interface RowsNumberInputProps {
     defaultValue: number;
 }
 
-const MAX_PER_PAGE = 100;
-const MIN_PER_PAGE = 1;
+export const MAX_PER_PAGE = 100;
+export const MIN_PER_PAGE = 1;
 
 export const RowsNumberInput = ({ onPerPageChange, defaultValue }: RowsNumberInputProps) => {
     const debouncer = useDebouncedCallback((page: number) => {
