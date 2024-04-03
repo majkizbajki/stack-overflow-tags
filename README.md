@@ -28,7 +28,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 The project includes a Storybook that can be opened with:
 
 ```bash
-npm storybook
+npm run storybook
 # or
 yarn storybook
 ```
