@@ -9,7 +9,7 @@ The Stack Overflow Tags project is a simple website that is used to search tags 
 
 ## How to open the project?
 
-First, run the development server:
+First, run the development server (remember to include the .env file in the root directory):
 
 ```bash
 npm run dev
